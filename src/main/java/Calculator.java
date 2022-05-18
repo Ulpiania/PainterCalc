@@ -56,12 +56,14 @@ public class Calculator {
             finalExtraArea += totalWidth * totalHeight;
 
         }
+
         System.out.println("How many square meters can the amount of paint in your bucket cover?");
         bucketAmount = Float.parseFloat(myScanner.nextLine());
         System.out.println("How many coats of paint do you want to use?");
         coats = Integer.parseInt(myScanner.nextLine());
         System.out.println("How much in pounds does a single bucket cost?");
         bucketCost = Integer.parseInt(myScanner.nextLine());
+
         finalSize = finalWallArea - finalExtraArea;
         bucketsNeeded = (float) Math.ceil(finalSize / bucketAmount) * coats;
         totalPrice = bucketsNeeded * bucketCost;
